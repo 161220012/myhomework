@@ -5,6 +5,7 @@ import Record.Record;
 import UI.SScreen;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import java.io.File;
 
 /**
  * @ Author     ：cjh
@@ -19,7 +20,7 @@ public class ScorpionMonster extends Creature implements Runnable{
         name="蝎子";
         ListMonster.add(this);
         String url=null;
-        java.io.File file = new java.io.File("resource\\scorpion.png");
+        java.io.File file = new java.io.File("classes"+File.separator+"scorpion.png");
         url = file.toURI().toString();
 
         image = new Image(url);

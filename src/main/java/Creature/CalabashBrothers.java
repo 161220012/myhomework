@@ -6,6 +6,7 @@ import Record.Record;
 import UI.SScreen;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import java.io.File;
 
 /**
  * @ Author     ：cjh
@@ -27,7 +28,7 @@ public class CalabashBrothers extends Creature implements Runnable{
         this.rank = CalabashEnum.values()[i].getRank();
         ListCalabash.add(this);
         String url=null;
-        java.io.File file = new java.io.File("resource\\"+rank+".png");
+        java.io.File file = new java.io.File("classes"+File.separator+rank+".png");
         url = file.toURI().toString();
 
         image = new Image(url);
@@ -102,7 +103,8 @@ public class CalabashBrothers extends Creature implements Runnable{
         }*/
         return brothers;
     }
-    public static void main(String[] args)/**程序测试入口*/
+    /*
+    public static void main(String[] args)
     {
         // 让葫芦娃随便站队
         CalabashBrothers[] brothers=CalabashBrothers.birth();
@@ -115,12 +117,12 @@ public class CalabashBrothers extends Creature implements Runnable{
 
         // 再次让葫芦娃打乱位置
         brothers=CalabashBrothers.birth();
-        /*
+
         for(int i=0;i<7;i++) {
             int num1 = (int) (Math.random() * 7);
             int num2 = (int) (Math.random() * 7);
             CalabashBrothers.swapPosition(brothers,num1,num2);
-        }*/
+        }
         System.out.println();
         System.out.println("再次随机后位置：");
         for(CalabashBrothers s:brothers)
@@ -133,6 +135,7 @@ public class CalabashBrothers extends Creature implements Runnable{
         for(CalabashBrothers s:brothers)
             s.reportColor();
     }
+    */
     public void run() {
         try {
 

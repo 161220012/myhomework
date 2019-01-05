@@ -5,6 +5,7 @@ import Record.Record;
 import UI.SScreen;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import java.io.File;
 
 /**
  * @ Author     ：cjh
@@ -19,7 +20,7 @@ public class SnakeMonster extends Creature implements Runnable{/**创建人：�
         name="蛇精";
         ListMonster.add(this);
         String url=null;
-        java.io.File file = new java.io.File("resource\\snake.png");
+        java.io.File file = new java.io.File("classes"+File.separator+"snake.png");
         url = file.toURI().toString();
 
         image = new Image(url);

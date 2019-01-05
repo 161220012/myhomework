@@ -6,6 +6,7 @@ import UI.CountDown;
 import UI.SScreen;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import java.io.File;
 
 /**
  * @ Author     ：cjh
@@ -21,7 +22,7 @@ public Grandparent(int i,int j)
     name="爷爷";
     ListCalabash.add(this);
     String url=null;
-    java.io.File file = new java.io.File("resource\\yeye.png");
+    java.io.File file = new java.io.File("classes"+File.separator+"yeye.png");
     url = file.toURI().toString();
 
     image = new Image(url);

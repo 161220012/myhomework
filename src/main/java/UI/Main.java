@@ -15,7 +15,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import java.io.*;
 import javafx.stage.Stage;
-
+import java.io.File;
 /*
  *.@ Author     ：cjh
  * @ Description：程序主入口
@@ -34,7 +34,7 @@ public class Main extends SApplication {
 
         //music
         String url=null;
-        java.io.File file = new java.io.File("resource\\test.mp3");
+        java.io.File file = new java.io.File("classes"+File.separator+"test.mp3");
         url = file.toURI().toString();
         Media media = new Media(url);
         MediaPlayer mplayer = new MediaPlayer(media);
@@ -50,7 +50,7 @@ public class Main extends SApplication {
     protected void after() {
 
         String url=null;
-        java.io.File file = new java.io.File("resource\\title.png");
+        java.io.File file = new java.io.File("classes"+File.separator+"title.png");
         url = file.toURI().toString();
 
         Image image = new Image(url);
@@ -61,7 +61,7 @@ public class Main extends SApplication {
         imageView.setLayoutY(100);
         getRoot().getChildren().add(imageView);
 
-        file = new java.io.File("resource\\background.png");
+        file = new java.io.File("classes"+File.separator+"background.png");
         url = file.toURI().toString();
         image = new Image(url);
         ImageView imageView1 = new ImageView(image);

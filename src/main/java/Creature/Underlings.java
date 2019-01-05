@@ -5,6 +5,7 @@ import Record.Record;
 import UI.SScreen;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import java.io.File;
 
 /**
  * @ Author     ：cjh
@@ -21,7 +22,7 @@ public class Underlings extends Creature implements Runnable{/**创建人：陈�
         number++;
         ListMonster.add(this);
         String url=null;
-        java.io.File file = new java.io.File("resource\\1s.jpg");
+        java.io.File file = new java.io.File("classes"+File.separator+"1s.jpg");
         url = file.toURI().toString();
         image = new Image(url);
         standOnMap(i,j);
